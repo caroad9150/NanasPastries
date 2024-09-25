@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valide sus credenciales</title>
+    <link rel="stylesheet" href="~/Content/login.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="logo">
+            <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+        </div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+        <div class="content">
+            <div class="login-form">
+                <p>Ingresa tu cedula para ver u historial</p>
+                <form method="post" action="/Home/Consultarahistorialrepos">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" name="idcliente" size="50">
+                    </div>
+                    <button type="submit">🔎</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

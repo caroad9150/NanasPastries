@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encargo</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="logo">
+            <h2>Nana's Pastries</h2>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location.href='https://web.whatsapp.com/';">📱</button>
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultacaterin';">🕒</button>
+            <button onclick="window.location.href = '/Home/Consultacaterin';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <form method="post" action="/Home/Confircaterin">
+            <label>ID Cliente:</label>
+            <input type="text" name="idcliente" size="50">
+            <label>Degustación:</label>
+            <select name="degustacion" size="10">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+            <label>Fecha a convenir para la degustación (puede saltarlo si no desea degustación):</label>
+            <input type="date" name="fech_hora_degus" size="50">
+            <br>
+            <label>Dirección de evento:</label>
+            <input type="text" name="direc" size="50">
+            <br />
+            <label>Fecha del evento:</label>
+            <input type="date" name="fechaevento" size="50">
+            <br />
+            <label>Hora del evento:</label>
+            <input type="time" name="hora" size="50">
+            <br />
+            <label>Paquete:</label>
+            <select name="paquete" size="10">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <br />
+            <input type="submit" value="Encargar">
+        </form>
+    </div>
+</body>
+</html>

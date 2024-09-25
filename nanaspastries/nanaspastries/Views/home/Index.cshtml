@@ -1,0 +1,56 @@
+﻿@{
+            ViewBag.Title = "Tipo de Cambio";
+            Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 BD</title>
+    <link rel="stylesheet" href="~/Content/menu.css">
+    <link rel="manifest" href="~/manifest.json" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nana's Pastries</h1>
+            <p>Bienvenido/a a la aplicación, ingresa para ver los servicios</p>
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" alt="Logo" />
+            </div>
+        </header>
+        <div class="intro">
+            <!-- Contenido opcional -->
+        </div>
+        <div class="main-content">
+            <div class="content">
+                <article>
+                    <ul>
+                        <li>
+                            <a href="/Home/Login">Login</a>
+                            <br><br>
+                        </li>
+                        <li>
+                            <a href="/Home/Registro">Registrarme</a>
+                            <br><br>
+                        </li>
+                        <li>
+                            <a href="/Home/Consultadesbloqueo">Desbloquear mi cuenta</a>
+                            <br><br>
+                        </li>
+                        <li>
+                            <a href="/Home/LoginAdmin">Administrador</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h2>Tipo de Cambio</h2>
+        <p>El tipo de cambio de venta es: @ViewBag.TipoCambio</p>
+    </footer>
+</body>
+</html>

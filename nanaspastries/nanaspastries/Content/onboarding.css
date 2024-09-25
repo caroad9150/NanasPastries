@@ -1,0 +1,90 @@
+﻿/* Contenedor principal del Onboarding */
+#onboarding-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para cada pantalla de Onboarding */
+.onboarding-screen {
+    display: none;
+    text-align: center;
+}
+
+    .onboarding-screen.active {
+        display: block;
+    }
+
+    /* Estilos para los títulos */
+    .onboarding-screen h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #ea4470;
+    }
+
+    /* Estilos para las descripciones */
+    .onboarding-screen p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+/* Estilos para los botones de navegación */
+.onboarding-btn {
+    background-color: #ea4470;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+    .onboarding-btn:hover {
+        background-color: #45a049;
+    }
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    #onboarding-container {
+        padding: 15px;
+    }
+
+    .onboarding-screen h2 {
+        font-size: 20px;
+    }
+
+    .onboarding-screen p {
+        font-size: 16px;
+    }
+
+    .onboarding-btn {
+        font-size: 16px;
+    }
+}
+/* Estilos para el botón de saltar */
+.skip-btn {
+    background-color: transparent;
+    color: #ea4470;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+    .skip-btn:hover {
+        color: #45a049;
+    }
+
+/* Asegurando que los botones estén alineados correctamente */
+.onboarding-btn, .skip-btn {
+    display: inline-block;
+    margin-top: 10px;
+}

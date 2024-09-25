@@ -1,0 +1,252 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce - Nana's Pastries</title>
+    <link rel="stylesheet" href="~/Content/menufotos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nana's Pastries</h1>
+            <p>Panadería y Repostería</p>
+            <div class="header">
+                <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+                <div class="logo">
+                    <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+                </div>
+                <div class="buttons">
+                    <button onclick="https://web.whatsapp.com/">📱</button>
+                    <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                    <button onclick="window.location.href = '/Home/Consultacarrito';">🛒</button>
+                    <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+                </div>
+            </div>
+        </header>
+        <form method="post" action="/Home/FormCarritorepos">
+            <div class="main-content">
+                <section class="content">
+                    <h2>Reposteria dulce</h2>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ4lg36cr5G3xMylQ3z-UU92wOHCy17dUkQQ&s" alt="Alfajores">
+                        <h3>Alfajores</h3>
+                        <p>500 colones </p>
+                        <button type="submit" value="productos=alfajores">Agregar al carrito</button>
+                    </article>
+
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNReUk79jRnmfxRfHS-RD5_Wnpe_F1QxK23O23_BZ7gaD57NA26X3eyXLZfc8k2MdxjP8&usqp=CAU" alt="Costillas">
+                        <h3>Costillas</h3>
+                        <p>450 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSau6MLL2IwuuzmAFrqlepZx-KQ1kfCk1CCFA&s">
+                        <h3>Tartaleta dulce</h3>
+                        <p>1200 colones</p>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXNviy2JLBxFTewSd_Fx9vtdpLiN1mWXaGlnpCxASTYc4AbBJT3nbY0x-WFW9do-7sRk&usqp=CAU">
+                        <h3>Cachitos</h3>
+                        <p>750 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://img-global.cpcdn.com/recipes/recipes_10582_v1425387434_receta_foto_00010582-iv24jz1ozi2mg8m7rz0j/680x482cq70/arrollado-de-dulce-de-leche-como-lo-hacia-mi-abuela-foto-principal.jpg">
+                        <h3>Arrollado</h3>
+                        <p>1200 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdCuhOQv3TEu3PdeSZhHPJy3Y7AO1Nxe0rQ&s">
+                        <h3>Moffin</h3>
+                        <p>600 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2k6uqEM9mGvis70wM2KkO1lOfS-4W4wgEw&s">
+                        <h3>Panuelito</h3>
+                        <p>1400 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://chefpepin.com/wp-content/uploads/2018/08/Bud%C3%ADn-o-Pud%C3%ADn-de-Pan.jpg">
+                        <h3>Pudin</h3>
+                        <p>1000 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvrF2_8a3NnLjbBFZU3scYw7jY5An5ISdEYA&s">
+                        <h3>Queque seco</h3>
+                        <p>1200 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://i.ytimg.com/vi/AEAwPDHet0Y/maxresdefault.jpg">
+                        <h3>Manzanitas</h3>
+                        <p>850 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfaTwwwU2WD1wMigmlG7B38Ux2R8etLuIY_Q&s">
+                        <h3>Borrachos</h3>
+                        <p>450 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsjyYk_t3aspdoeU2uc2ya0ySkT5xuAg66eg&s">
+                        <h3>Empanada dulce</h3>
+                        <p>650 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                </section>
+
+            </div>
+            <div class="main-content">
+                <section class="content">
+                    <h2>Reposteria Salada</h2>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO65jdDKutPdoHtvHnAiVuPSZuN69TJ71dCQ&s">
+                        <h3>Baguette</h3>
+                        <p>510 colones </p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+
+                    <article>
+                        <img src="https://donarepa.cr/wp-content/uploads/2018/05/Receta-Rosquillas.jpg">
+                        <h3>Bizcocho</h3>
+                        <p>950 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+
+                    <article>
+                        <img src="https://myminichefs.com/wp-content/uploads/2022/02/air-fryer-mini-pizza.jpg">
+                        <h3>Minipizzas</h3>
+                        <p>1500 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQjhJSuNOfeBCxaFFpGOtsxw9SgeEaM0tjA&s">
+                        <h3>Cangrejos</h3>
+                        <p>1750 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_tN20o1Q9jiguu0N7PK5cYnlpEQfiIXSu7Q&s">
+                        <h3>Enchilada</h3>
+                        <p>1200 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQpAKk8-f2TUmmQEb546GeNxR_tBMhdKzDxg&s">
+                        <h3>Pastel de pollo</h3>
+                        <p>1200 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgreXPyLsvcb8QEgzTfH7K6YkU3iWAzQ_2rQ&s">
+                        <h3>Pastel de carne</h3>
+                        <p>1400 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdLCmklZNI-7HpdnZhnbQqfv9I95enmevkAA&s">
+                        <h3>Pan de especies</h3>
+                        <p>1000 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://i.ytimg.com/vi/eVQLHmtclh4/maxresdefault.jpg">
+                        <h3>Tartaleta salada</h3>
+                        <p>1200 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVKafC88LoXvGLYP8_D4fSnkKxPBc2GlVAtA&s">
+                        <h3>Empana salada</h3>
+                        <p>850 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRKS6ZMFAM8A4T-aBshqj2LuWHCN-7iruBvg&s">
+                        <h3>Palitos de queso</h3>
+                        <p>750 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                    <article>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjKyRj3BjPNdE9Zhx1xScM27jKTdgkgYhOQ&s">
+                        <h3>Trenza natillera</h3>
+                        <p>1950 colones</p>
+                        <button type="submit" value="productos">Agregar al carrito</button>
+                    </article>
+                </section>
+
+            </div>
+            </form>
+
+            <div class="main-content">
+                <section class="content">
+                    <form method="post" accion="/Home/FormCarritorepos">
+                        <h2>Pasteltes</h2>
+                        <article>
+                            <img src="https://cdn2.cocinadelirante.com/sites/default/files/images/2019/05/pastel-de-chantilly-de-vainilla-sin-mantequilla.jpg">
+                            <h3>Pastel de Vainilla</h3>
+                            <p>Sabor vailla con cobertura de crema chantilli, 20 porciones</p>
+                            <p>15 000 colones </p>
+                            <button type="submit" value="productos">Agregar al carrito</button>
+                        </article>
+
+                        <article>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3C0WNHr4QmePg9ZPw3ag2gqwaEOizTlNtcA&s">
+                            <h3>Pastel de chocolate</h3>
+                            <p>Sabor chocolate con cobertura de dulce de leche, 20 porciones</p>
+                            <p>15 500 colones</p>
+                            <button type="submit" value="productos">Agregar al carrito</button>
+                        </article>
+
+                        <article>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rCrX2kxRKR2A5Vh6RyJKPSn19NYslMtKZQ&s">
+                            <h3>Pastel de fresa</h3>
+                            <p>Sabor fresa con cobertura de lustre tradicional, 20 porciones</p>
+                            <p>13 000 colones </p>
+                            <button type="submit" value="productos">Agregar al carrito</button>
+                        </article>
+                        <article>
+                            <img src="https://assets.elgourmet.com/wp-content/uploads/2023/03/red-v_kvUtb7ixJqMHo63e5OnXWyjZsfV2zP.png">
+                            <h3>Pastel de red velvet</h3>
+                            <p>Red velvet tradicional con cobertura de queso crema, 20 porciones</p>
+                            <p>17 000 colones</p>
+                            <button type="submit" value="productos = redvelvet">Agregar al carrito</button>
+                        </article>
+                    </form>
+                    
+                </section>
+            </div>
+            <div>
+                <section>
+                    <form method="post" action="/Home/Encargo">
+                        <article>
+                            <img src="https://st.depositphotos.com/1293766/2172/i/450/depositphotos_21724401-stock-photo-mural-of-various-cakes.jpg">
+                            <h3>Personalizados</h3>
+                            <p>Puedes escoger el sabor, cobertura, color y porciones de tu pastel.</p>
+                            <button type="submit">Encargo</button>
+                        </article>
+                    </form>
+
+                </section>
+            </div>
+        
+
+        <footer>
+            <p>Nana's Pastries | Tierra Blanca | Tel: 0000-0000</p>
+        </footer>
+    </div>
+</body>
+</html>

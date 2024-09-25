@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valide sus credenciales</title>
+    <link rel="stylesheet" href="~/Content/login.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" alt="Logo de Nana's Pastries" />
+                <h1>Nana's Pastries</h1>
+
+            </div>
+            <p>Bienvenido/a, por favor ingrese sus datos</p>
+        </header>
+        <div class="login-form">
+            <form method="post" action="/Home/Loginn">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text" name="id" size="50">
+                    <label>Clave</label>
+                    <input type="text" name="clave" size="50">
+                </div>
+                <button type="submit">Validar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formulario de Encargo </title>
+    <link rel="stylesheet" href="~/Content/form.css" />
+</head>
+<body>
+    <header>
+        <h3>Formulario de Encargo</h3>
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+            <div class="logo">
+                <h3>Nana's Pastries</h3>
+                <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+            </div>
+            <div class="buttons">
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+    </header>
+    <form method="post" action="/Home/AddCarritorepos">
+        <label>ID cliente:</label>
+        <input type="text" name="idcliente" size="50">
+        <br>
+        <label>Producto:</label>
+        <select name="productos" size="10">
+            <option>alfajor</option>
+            <option>costilla</option> 
+            <option>tartaletas</option> 
+            
+            <option>cachitos</option>
+            
+            <option>arrollado</option>
+            
+            <option>moffin</option>
+            
+            <option>panuelito</option>
+            
+            <option>pudin</option>
+            
+            <option>queque seco</option>
+            
+            <option>manzanita</option>
+            
+            <option>borrachos</option>
+            
+            <option>empanada dulce</option>
+            
+            <option>baguette</option>
+            
+            <option>bizcocho</option>
+            
+            <option>minipizza</option>
+            <option>cangrejos</option>
+            
+            <option>enchilada</option>
+            
+            <option>pastel de pollo</option>
+            
+            <option>pastel de carne</option>
+            
+            <option>pan especies</option>
+            
+            <option>tartaleta salada</option>
+            
+            <option>empanada salada</option>
+            
+            <option>palitos de queso</option>
+            
+            <option>arrollado de natilla</option>
+            
+        </select>
+        <br>
+        <label>Cantidad:</label>
+        <input type="range" name="cantidad" min="0" max="50" value="0" size="50" oninput="cantidadOutput.value = this.value">
+        <output id="cantidadOutput" for="cantidad">0</output>
+        <br>
+        <input type="submit" value="Agregar al carrito">
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mensaje</title>
+    <link href="~/Content/menufotos.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0078d7">
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="buttons">
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <button class="btn-large" onclick="window.location.href='/Home/Menu'">Volver</button>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registrado con éxito:', registration);
+            })
+            .catch((error) => {
+                console.log('Error al registrar el Service Worker:', error);
+            });
+    }
+</script>

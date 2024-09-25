@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoria</title>
+    <link rel="stylesheet" href="~/Content/auditoria.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menuadmin';">🏠</div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Auditoria</h1>
+            @foreach (var item in Model)
+            {
+                <table border="1">
+                        <tr>
+                            <th>ID Cliente</th>
+                            <td>@item.Idcliente</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha y Hora</th>
+                            <td>@item.FechaHoraLogin</td>
+                        </tr>
+                        <tr>
+                            <th>IP</th>
+                            <td>@item.Ip</td>
+                        </tr>
+                        <tr>
+                            <th>Buscador</th>
+                            <td>@item.Buscador</td>
+                        </tr>
+                        <tr>
+                            <th>Bloqueos Clave</th>
+                            <td>@item.BloqueosClave</td>
+                        </tr>
+                        <tr>
+                            <th>Acción</th>
+                            <td>@item.Accion</td>
+                        </tr>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            }
+            </div>
+</body>
+</html>

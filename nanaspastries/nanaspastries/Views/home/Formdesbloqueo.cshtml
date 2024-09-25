@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formulario de Encargo</title>
+    <link rel="stylesheet" href="~/Content/form.css" />
+</head>
+<body>
+    <header>
+        <h3>Formulario de Encargo</h3>
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Index';">🏠</div>
+            <div class="logo">
+                <h3>Nana's Pastries</h3>
+            </div>
+            <div class="buttons">
+                <button onclick="window.location.href='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+    </header>
+    <form method="post" action="/Home/Desbloqueo">
+        <label>Id:</label>
+        <input type="text" name="idcliente" size="50" value="@ViewBag.IdCliente" readonly>
+        <br>
+
+        <label>Pregunta:</label>
+        <input type="text" name="pregunta" size="50" value="@ViewBag.Pregunta" readonly>
+        <br>
+        <label>Respuesta:</label>
+        <input type="text" name="respuesta" size="50">
+        <br>
+
+        <input type="submit" value="Desbloquear">
+    </form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿
+@model List<nanaspastries.Models.Productos>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Precio</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="buttons">
+            <button onclick="window.location.href='https://web.whatsapp.com/'">📱</button>
+            <button onclick="window.location.href='/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href='/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Cambiar Precio de Producto</h1>
+        @foreach (var producto in Model)
+        {
+            <form method="post" action="/Home/ActualizarPrecio">
+                <table>
+                    <tr>
+                        <th>ID producto</th>
+                        <td>
+                            <input type="text" name="idproducto" value="@producto.Idproducto" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>
+                            <input type="text" name="nombre" value="@producto.Nombre" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Precio</th>
+                        <td>
+                            <input type="number" name="precio" step="0.01" value="@producto.Precio" required>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Cambiar">
+            </form>
+        }
+    </div>
+</body>
+</html>

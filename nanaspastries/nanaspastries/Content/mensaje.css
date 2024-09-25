@@ -1,0 +1,130 @@
+﻿/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container style */
+.container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header style */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff69b4; /* Rosa */
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+/* Home icon style */
+.home-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Logo style */
+.logo {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+    .logo img {
+        max-height: 30px; /* Ajusta el tamaño del logo aquí */
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+/* Header buttons style */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+    .buttons button {
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+        .buttons button:hover {
+            background-color: #ff85c0; /* Rosa claro */
+        }
+
+/* Content style */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: justify;
+    color: #333;
+}
+
+    .content p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .buttons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (orientation: landscape) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 0;
+    }
+}

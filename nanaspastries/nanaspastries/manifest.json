@@ -1,0 +1,20 @@
+{
+  "name": "Nana's Pastries",
+  "short_name": "nanaspastries",
+  "start_url": "Index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0078d7",
+  "icons": [
+    {
+      "src": "https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

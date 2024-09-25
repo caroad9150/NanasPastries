@@ -1,0 +1,135 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registra tus datos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <header>
+        <h1>Nana's Pastries</h1>
+        <p>Registra tus datos</p>
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Index';">🏠</div>
+            <div class="buttons">
+                <button onclick="window.open('https://web.whatsapp.com/', '_blank');">📱</button>
+                <button>🕒</button>
+                <button>🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <form method="post" action="/Home/Agregarcliente">
+            <label>ID:</label>
+            <input type="text" name="id" size="50" required>
+            <br>
+            <label>Nombre completo:</label>
+            <input type="text" name="nombre" size="10" required>
+            <br>
+            <label>Celular:</label>
+            <input type="number" name="cel" size="10" required>
+            <br>
+            <label>Correo:</label>
+            <input type="email" name="correo" size="10" required>
+            <br>
+            <label>Dirección:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Seleccione un país</option>
+            </select>
+            <select id="provincia" name="provincia" required>
+                <option value="">Seleccione una provincia</option>
+            </select>
+            <select id="canton" name="canton" required>
+                <option value="">Seleccione un cantón</option>
+            </select>
+            <select id="distrito" name="distrito" required>
+                <option value="">Seleccione un distrito</option>
+            </select>
+            <br>
+            <label>Clave:</label>
+            <label>La clave debe incluir:</label>
+            <label>- Mayúsculas, minúsculas y al menos un número</label>
+            <label>- Mínimo 8, máximo 12 caracteres</label>
+            <input type="password" name="clave" size="10" required>
+            <br>
+            <label>Escribe una pregunta breve que puedas recordar la respuesta para recuperar tu cuenta:</label>
+            <input type="text" name="pregunta" size="10" required>
+            <br>
+            <label>Respuesta:</label>
+            <input type="text" name="respuesta" size="10" required>
+            <br>
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Cargar países
+            $.ajax({
+                url: '/Home/GetPaises',
+                type: 'GET',
+                success: function (data) {
+                    $('#pais').empty().append('<option value="">Seleccione un país</option>');
+                    $.each(data, function (index, item) {
+                        $('#pais').append('<option value="' + item.id + '">' + item.detalle + '</option>');
+                    });
+                }
+            });
+
+            // Cuando se cambia el país, cargar provincias
+            $('#pais').change(function () {
+                var idpais = $(this).val();
+                $.ajax({
+                    url: '/Home/GetProvincias',
+                    type: 'GET',
+                    data: { idpais: idpais },
+                    success: function (data) {
+                        $('#provincia').empty().append('<option value="">Seleccione una provincia</option>');
+                        $.each(data, function (index, item) {
+                            $('#provincia').append('<option value="' + item.id + '">' + item.detalle + '</option>');
+                        });
+                    }
+                });
+            });
+
+            // Cuando se cambia la provincia, cargar cantones
+            $('#provincia').change(function () {
+                var idprovincia = $(this).val();
+                $.ajax({
+                    url: '/Home/GetCantones',
+                    type: 'GET',
+                    data: { idprovincia: idprovincia },
+                    success: function (data) {
+                        $('#canton').empty().append('<option value="">Seleccione un cantón</option>');
+                        $.each(data, function (index, item) {
+                            $('#canton').append('<option value="' + item.id + '">' + item.detalle + '</option>');
+                        });
+                    }
+                });
+            });
+
+            // Cuando se cambia el cantón, cargar distritos
+            $('#canton').change(function () {
+                var idcanton = $(this).val();
+                $.ajax({
+                    url: '/Home/GetDistritos',
+                    type: 'GET',
+                    data: { idcanton: idcanton },
+                    success: function (data) {
+                        $('#distrito').empty().append('<option value="">Seleccione un distrito</option>');
+                        $.each(data, function (index, item) {
+                            $('#distrito').append('<option value="' + item.id + '">' + item.detalle + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

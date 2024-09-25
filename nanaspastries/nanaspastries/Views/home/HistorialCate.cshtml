@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de pedidos </title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Historial';">🕒</button>
+            <button onclick="window.location.href = '/Home/Consultacaterin';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Detalles de la consulta</h1>
+        @foreach (var item in Model)
+        {
+            <table>
+                <tr>
+                    <th>ID catering</th>
+                    <td>@item.Idcate</td>
+                </tr>
+                <tr>
+                    <th>ID cliente</th>
+                    <td>@item.IdCliente</td>
+                </tr>
+                <tr>
+                    <th>Paquete</th>
+                    <td>@item.Paquete</td>
+                </tr>
+                <tr>
+                    <th>Precio</th>
+                    <td>@item.Precio</td>
+                </tr>
+                <tr>
+            </table>
+        }
+        </div>
+</body>
+</html>

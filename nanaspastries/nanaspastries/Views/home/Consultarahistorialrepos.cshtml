@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valide sus credenciales</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="logo">
+            Nana's Pastries
+            <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+        </div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+        <div class="container">
+            <header>
+                <h1>Nana's Pastries</h1>
+                <p>Bienvenido/a, por favor ingrese sus datos</p>
+            </header>
+            <div class="login-form">
+                <form method="post" action="/Home/Historial">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" name="id" size="50">
+                    </div>
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

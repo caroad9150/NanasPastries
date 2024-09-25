@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuena bloqueada</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+            <div class="logo">
+                Nana's Pastries
+
+            </div>
+            <div class="buttons">
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+        <div class="content">
+            <form method="post" action="/Home/Consultadesbloqueo">
+                <label>Su cuenta ha sido bloqueada</label>
+                <p> Si desea recuperarla .</p>
+                <br /><br /><br /><br />
+                <input type="submit" value="Desbloquear">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Consultacarrito</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <header>
+        <h1>Nana's Pastries</h1>
+        <h3>Ver mi carrito</h3>
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+            <div class="buttons">
+                <button onclick="window.location.href='https://web.whatsapp.com/';">📱</button>
+                <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+    </header>
+    <div>
+        <form method="post" action="/Home/Pagar_r">
+            <div class="form-group">
+                <label>ID Cliente:</label>
+                <input type="text" name="idcliente" size="50" required>
+                <label>Número de Tarjeta:</label>
+                <input type="text" name="numeroTarjeta" size="50" required>
+                <label>Monto:</label>
+                <input type="number" name="monto" size="50" required>
+            </div>
+            <button type="submit" class="search-button">🔎</button>
+        </form>
+    </div>
+</body>
+</html>

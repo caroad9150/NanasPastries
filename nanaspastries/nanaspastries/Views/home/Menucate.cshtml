@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce - Nana's Pastries</title>
+    <link rel="stylesheet" href="~/Content/menufotos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nana's Pastries</h1>
+            <p>Panadería y Repostería</p>
+            <div class="header">
+                <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+                <div class="logo">
+                    Nana's Pastries
+                    <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+                </div>
+                <div class="buttons">
+                    <button onclick="https://web.whatsapp.com/">📱</button>
+                    <button onclick="window.location.href = '/Home/Consultacaterin';">🕒</button>
+                    <button onclick="window.location.href = '/Home/Consultacaterin';">🛒</button>
+                    <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+                </div>
+            </div>
+        </header>
+        <form method="post" action="/Home/Formcaterin">
+            <div class="main-content">
+                <section class="content">
+                    <h2>Paquete 1</h2>
+                    <br /><br /><br /><br />
+                    <article>
+                        <img src="https://www.evento.love/blog/wp-content/uploads/2017/01/17_01_02.jpg" alt="paquete1">
+                        <h3>100 piezas de reposteria, 50 dulces y 50 saladas</h3>
+                        <p>100 000 colones </p>
+                        <button type="submit" value="paquete1">Encargar  📦</button>
+                    </article>
+                </section>
+                <div>
+                    <section class="content">
+                        <h2>Paquete 2</h2>
+                        <br /><br /><br /><br />
+                        <article>
+                            <img src="https://www.tomasacostadecorador.com.co/wp-content/uploads/2021/04/Catering-TA.jpg" alt="paquete2">
+                            <h3>Pastel de 30 porciones sabor a escoger, 200 piezas de reposteria, 100 dulces y 100 saladas</h3>
+                            <p>350 000 colones </p>
+                            <button type="submit" value="paquete2">Encargar  📦</button>
+                        </article>
+                    </section>
+                </div>
+                <div>
+                    <section class="content">
+                        <h2>Paquete 3</h2>
+                        <br /><br /><br /><br />
+                        <article>
+                            <img src="https://s.ineventos.com/blog/2021/100176/124510-1080w.webp" alt="paquete3">
+                            <h3>1 pastel de 30 porciones y 2 pasteles de 30 porciones sabor a escoger </h3>
+                            <h3>300 piezas de reposteria, 100 dulces y 200 saladas </h3>
+                            <p>500 000colones </p>
+                            <button type="submit" value="paquete3">Encargar  📦</button>
+                        </article>
+                    </section>
+                </div> 
+               
+
+            </div>
+        </form>
+
+        <footer>
+            <p>Nana's Pastries | Tierra Blanca | Tel: 0000-0000</p>
+        </footer>
+    </div>
+</body>
+</html>

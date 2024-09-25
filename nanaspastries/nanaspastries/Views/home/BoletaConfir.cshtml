@@ -1,0 +1,42 @@
+﻿@model nanaspastries.Controllers.BoletaViewModel
+@using nanaspastries.Models
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Error</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                @*<img src="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" alt="Logo de Nana's Pastries" />*@
+                <h1>Nana's Pastries</h1>
+
+            </div>
+            <p>Factura</p>
+        </header>
+        <div class="login-form">
+            div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠
+        </div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Confirmación de pedido</h2>
+        <p>ID del Pedido: @Model.IdPedido</p>
+        <p>Producto: @Model.Producto</p>
+        <p>Precio: @Model.Precio</p>
+        <p>Total: @Model.Total</p>
+        <p>Estado: @Model.Estado</p>
+
+    </div>
+</body>
+</html>

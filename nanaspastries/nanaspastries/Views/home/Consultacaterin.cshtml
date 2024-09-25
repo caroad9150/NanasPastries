@@ -1,0 +1,43 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Consultacarrito</title>
+    <link rel="stylesheet" href="~/Content/login.css">
+</head>
+<body>
+    <header>
+        <h1>Nana's Pastries</h1>
+        <h3>Ver mi carrito de catering</h3>
+        <div class="header">
+            <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+            <div class="logo">
+                <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+            </div>
+            <div class="buttons">
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="window.location.href = '/Home/Consultacaterin';">🕒</button>
+                <button onclick="window.location.href = '/Home/Consultacaterin';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+    </header>
+    <div>
+        <form method="post" action="/Home/Consultarahistorialcate">
+            <div class="form-group">
+                <label>ID</label>
+                <input type="text" name="idcliente" size="50">
+            </div>
+            <button type="submit">🔎</button>
+        </form>
+    </div>
+</body>
+</html>

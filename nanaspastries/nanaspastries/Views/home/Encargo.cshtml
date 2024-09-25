@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encargo</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="logo">
+            <h2>Nana's Pastries</h2>
+            <img scr="https://i.pinimg.com/736x/ab/c1/0b/abc10b8f1a21a828f918bad1b235c57f.jpg" />
+        </div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <form method="post" action="/Home/Confirencargo">
+            <label>ID Cliente:</label>
+            <input type="text" name="idcliente" size="50">
+            <label>Sabor:</label>
+            <select name="sabor" size="10">
+                <option>Vainilla</option>
+                <option>Fresa</option>
+                <option>Chocolate</option>
+                <option>Red velvet</option>
+            </select>
+            <label>Porciones:</label>
+            <input type="range" name="porciones" min="0" max="50" value="0" size="100" oninput="porcionesOutput.value = this.value">
+            <output id="porcionesOutput" for="porciones">0</output>
+            <br>
+            <label>Cobertura:</label>
+            <select name="cobertura" size="10">
+                <option>Chantilli</option>
+                <option>Lustre tradicional</option>
+                <option>Dulce de leche</option>
+                <option>Queso Crema</option>
+                <option>Chocolate</option>
+            </select>
+            <label>Color de cobertura : (poner un . si no desea especificar el color)</label>
+            <input type="text" name="colorcobertura" size="50">
+            <label>Fecha de entrega:</label>
+            <input type="date" name="fecha" size="50">
+            <label>Hora de entrega:</label>
+            <input type="time" name="hora" size="50">
+            <label>A domicilio?:</label>
+            <select name="domicilio" size="10">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+            <label>Direccion de entrega (poner un . si no es a domisilo):</label>
+            <input type="text" name="direccion" size="50">
+            <br>
+            <input type="submit" value="Encargar">
+        </form>
+    </div>
+</body>
+</html>

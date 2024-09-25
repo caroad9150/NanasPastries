@@ -1,0 +1,33 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Nana's Pastries</h1>
+            </div>
+            <p>Atención</p>
+        </header>
+        <div class="login-form">
+            <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+            <div class="buttons">
+                <button onclick="https://web.whatsapp.com/">📱</button>
+                <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+                <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+                <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+            </div>
+        </div>
+        <div class="container">
+            <p class="message">@Model.message</p>
+            <a href="/" class="return-link">Retornar</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de pedidos de @ViewBag.Idcliente</title>
+    <link rel="stylesheet" href="~/Content/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="home-icon" onclick="window.location.href='/Home/Menu';">🏠</div>
+        <div class="buttons">
+            <button onclick="https://web.whatsapp.com/">📱</button>
+            <button onclick="window.location.href = '/Home/Consultahisrepos';">🕒</button>
+            <button onclick="window.location.href = '/Home/ConsulCarrito';">🛒</button>
+            <button onclick="window.location.href ='/Home/Acercade';">ℹ️</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Detalles de la consulta</h1>
+        <form method="post" action="/Home/Pagar_r">
+            <table>
+                <tr>
+                    <th>ID pedido</th>
+                    <td>@ViewBag.Idpedido</td>
+                </tr>
+                <tr>
+                    <th>ID cliente</th>
+                    <td>@ViewBag.Idcliente</td>
+                </tr>
+                <tr>
+                    <th>Productos</th>
+                    <td>@ViewBag.Productos</td>
+                </tr>
+                <tr>
+                    <th>Cantidad</th>
+                    <td>@ViewBag.Cantidad</td>
+                </tr>
+                <tr>
+                    <th>Precio</th>
+                    <td>@ViewBag.Precio</td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td>@ViewBag.Total</td>
+                </tr>
+                <tr>
+                    <th>Estado</th>
+                    <td>@ViewBag.Estado</td>
+                </tr>
+                <tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
